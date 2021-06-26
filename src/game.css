@@ -1,0 +1,36 @@
+table.game-table {
+    margin-top: 15vh;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse;
+}
+
+td:nth-child(2) {
+    width: 100%;
+}
+
+div.choice {
+    border: 1px solid rgb(232, 236, 247);
+    height: 70vh;
+    line-height: 70vh;
+    width: min-content;
+}
+
+div.choice.left {
+    text-align: left;
+    padding-left: 15px;
+}
+
+div.choice.right {
+    text-align: right;
+    padding-right: 15px;
+}
+
+div.choice > img {
+    vertical-align: middle;
+}
+
+div.choice.left > img {
+    transform: scaleX(-1);
+}
