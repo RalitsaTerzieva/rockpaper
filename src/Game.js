@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './game.css';
 import Choice from './Choice.js';
 import Button from './Button.js';
+import Confetti from 'react-dom-confetti';
 
 class Game extends Component {
     constructor(props) {
@@ -13,8 +14,23 @@ class Game extends Component {
             ties: 0,
             playerChoice: "rock",
             aiChoice: "rock",
+            won: false,
         };
         this.state = this.initialState
+
+        this.confettiConfig = {
+            angle: "90",
+            spread: 360,
+            startVelocity: "36",
+            elementCount: "100",
+            dragFriction: 0.12,
+            duration: "2000",
+            stagger: 3,
+            width: "8px",
+            height: "8px",
+            perspective: "500px",
+            colors: ["#a864fd", "#29cdff", "#78ff44", "#ff718d", "#fdff6a"]
+          };
     }
 
     buttonClicked = (playerChoice) => {
@@ -31,14 +47,17 @@ class Game extends Component {
 
         if (playerChoice === aiChoice) {
             newState['ties']++
+            newState['won'] = false
         } else if (
             (playerChoice === "rock" && aiChoice === "scissors") ||
             (playerChoice === "paper" && aiChoice === "rock") ||
             (playerChoice === "scissors" && aiChoice === "paper")
         ) {
             newState['wins']++
+            newState['won'] = true
         } else {
             newState['losses']++
+            newState['won'] = false
         }
 
         this.setState(newState)
@@ -49,7 +68,9 @@ class Game extends Component {
     }
 
     render() {
-        return <table className="game-table">
+        return <div>
+            <Confetti active={ this.state.won } config={ this.confettiConfig } className="confetti"/>
+            <table className="game-table">
             <tbody>
                 <tr>
                     <td><Choice value={this.state.playerChoice} orientation="right" player="Player" /></td>
@@ -75,6 +96,8 @@ class Game extends Component {
                 </tr>
             </tbody>
         </table>
+        </div>
+        
     }
 }
 
