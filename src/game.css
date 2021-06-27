@@ -55,11 +55,8 @@ button.choice-button {
     cursor: pointer;
 }
 
-.buttons {
-    margin-bottom: 4vh;
-}
 
-button.choice-button:hover {
+button:hover {
     opacity: 0.85;
 }
 
@@ -78,4 +75,13 @@ hr {
 .counter {
     color: #e62649;
     font-weight: bold;
+}
+
+.start-over {
+    color: #fff;
+    background-color: #e62649;
+    border: none;
+    height: 5vh;
+    border-radius: 3px;
+    cursor: pointer;
 }
