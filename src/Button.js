@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import rock from './img/rock.png';
-import paper from './img/paper.png';
-import scissors from './img/scissors.png';
+import rock from './img/rock.svg';
+import paper from './img/paper.svg';
+import scissors from './img/scissors.svg';
 
 class Choice extends Component {
     render() {
@@ -11,12 +11,9 @@ class Choice extends Component {
             'scissors': scissors,
         }[this.props.value]
         
-        let classes = `choice ${this.props.orientation}`
-        
-        return <div className={classes}>
-            <h2 class="player counter">{this.props.player}</h2>
+        return <button class="choice-button">
             <img src={imgSrc} alt={this.props.value} />
-        </div>
+        </button>
     }
 }
 

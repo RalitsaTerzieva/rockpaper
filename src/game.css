@@ -13,8 +13,18 @@ td:nth-child(2) {
 div.choice {
     border: 1px solid rgb(232, 236, 247);
     height: 70vh;
-    line-height: 70vh;
     width: min-content;
+    display:flex;
+    position: relative;
+}
+
+h2.player {
+    position: absolute;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 100%;
+    top: 0;
+    text-align: center;
 }
 
 div.choice.left {
@@ -27,10 +37,45 @@ div.choice.right {
     padding-right: 15px;
 }
 
-div.choice > img {
+div.choice img {
     vertical-align: middle;
+    margin: auto;
+    width: 22vw;
 }
 
-div.choice.left > img {
+div.choice.left img {
     transform: scaleX(-1);
+}
+
+button.choice-button {
+    width: 14vh;
+    height: 14vh;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.buttons {
+    margin-bottom: 4vh;
+}
+
+button.choice-button:hover {
+    opacity: 0.85;
+}
+
+button.choice-button > img {
+    pointer-events: none;
+}
+
+hr {
+    height: 1px;
+    background-color: rgb(232, 236, 247);
+    border: 0;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.counter {
+    color: #e62649;
+    font-weight: bold;
 }
