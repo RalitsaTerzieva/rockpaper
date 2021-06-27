@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/rockpaper/static/css/main.9cda0d47.chunk.css",
+    "main.js": "/rockpaper/static/js/main.35a1079c.chunk.js",
+    "main.js.map": "/rockpaper/static/js/main.35a1079c.chunk.js.map",
+    "runtime-main.js": "/rockpaper/static/js/runtime-main.f3345a6b.js",
+    "runtime-main.js.map": "/rockpaper/static/js/runtime-main.f3345a6b.js.map",
+    "static/js/2.e1e6a6f0.chunk.js": "/rockpaper/static/js/2.e1e6a6f0.chunk.js",
+    "static/js/2.e1e6a6f0.chunk.js.map": "/rockpaper/static/js/2.e1e6a6f0.chunk.js.map",
+    "index.html": "/rockpaper/index.html",
+    "static/css/main.9cda0d47.chunk.css.map": "/rockpaper/static/css/main.9cda0d47.chunk.css.map",
+    "static/js/2.e1e6a6f0.chunk.js.LICENSE.txt": "/rockpaper/static/js/2.e1e6a6f0.chunk.js.LICENSE.txt",
+    "static/media/paper.53be645e.svg": "/rockpaper/static/media/paper.53be645e.svg",
+    "static/media/paper.7371c2ba.png": "/rockpaper/static/media/paper.7371c2ba.png",
+    "static/media/rock.2f083d90.svg": "/rockpaper/static/media/rock.2f083d90.svg",
+    "static/media/rock.caf61e75.png": "/rockpaper/static/media/rock.caf61e75.png",
+    "static/media/scissors.4d3af62c.png": "/rockpaper/static/media/scissors.4d3af62c.png",
+    "static/media/scissors.a227635b.svg": "/rockpaper/static/media/scissors.a227635b.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f3345a6b.js",
+    "static/js/2.e1e6a6f0.chunk.js",
+    "static/css/main.9cda0d47.chunk.css",
+    "static/js/main.35a1079c.chunk.js"
+  ]
+}
