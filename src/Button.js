@@ -3,7 +3,7 @@ import rock from './img/rock.svg';
 import paper from './img/paper.svg';
 import scissors from './img/scissors.svg';
 
-class Choice extends Component {
+class Button extends Component {
     render() {
         let imgSrc = {
             'rock': rock,
@@ -11,10 +11,10 @@ class Choice extends Component {
             'scissors': scissors,
         }[this.props.value]
         
-        return <button class="choice-button">
+        return <button className="choice-button" onClick={e => {this.props.onClick(this.props.value)}}>
             <img src={imgSrc} alt={this.props.value} />
         </button>
     }
 }
 
-export default Choice;
+export default Button;

@@ -14,7 +14,7 @@ class Choice extends Component {
         let classes = `choice ${this.props.orientation}`
         
         return <div className={classes}>
-            <h2 class="player counter">{this.props.player}</h2>
+            <h2 className="player counter">{this.props.player}</h2>
             <img src={imgSrc} alt={this.props.value} />
         </div>
     }

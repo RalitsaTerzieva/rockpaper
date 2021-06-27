@@ -8,29 +8,36 @@ class Game extends Component {
         super(props);
         this.state = {};
     }
+    
+    buttonClicked(choice) {
+        console.log(choice)
+    }
+
     render() {
         return <table className="game-table">
-            <tr>
-                <td><Choice value="rock" orientation="right" player="Player" /></td>
-                <td style={{textAlign: "center"}}>
-                    <h1 class="counter">Round 6</h1>
-                    <div className="buttons">
-                        <Button value="rock" />
-                        <Button value="paper" />
-                        <Button value="scissors" />
-                    </div>
-                    <div>
-                        <hr />
-                        <strong>Wins: </strong><span className="counter" id="wins">0</span>
-                        <hr />
-                        <strong>Ties: </strong><span className="counter" id="ties">5</span>
-                        <hr />
-                        <strong>Losses: </strong><span className="counter" id="losses">10</span>
-                        <hr />
-                    </div>
-                </td>
-                <td><Choice value="paper" orientation="left" player="AI" /></td>
-            </tr>
+            <tbody>
+                <tr>
+                    <td><Choice value="rock" orientation="right" player="Player" /></td>
+                    <td style={{textAlign: "center"}}>
+                        <h1 className="counter">Round 6</h1>
+                        <div className="buttons">
+                            <Button value="rock" onClick={this.buttonClicked} />
+                            <Button value="paper" onClick={this.buttonClicked} />
+                            <Button value="scissors" onClick={this.buttonClicked} />
+                        </div>
+                        <div>
+                            <hr />
+                            <strong>Wins: </strong><span className="counter" id="wins">0</span>
+                            <hr />
+                            <strong>Ties: </strong><span className="counter" id="ties">5</span>
+                            <hr />
+                            <strong>Losses: </strong><span className="counter" id="losses">10</span>
+                            <hr />
+                        </div>
+                    </td>
+                    <td><Choice value="paper" orientation="left" player="AI" /></td>
+                </tr>
+            </tbody>
         </table>
     }
 }
